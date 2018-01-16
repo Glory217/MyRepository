@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    
+    <context-param>
+        <param-name>host</param-name>
+        <param-value>jdbc:mysql://localhost/</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>baseer</param-value>
+    </context-param>
+    
+   <servlet>
+   <servlet-name>MyJSPOne</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/JspLib.jsp</jsp-file> 
+        
+   <security-role-ref>
+   <role-name>Admin</role-name>
+   <role-link>Admin</role-link>
+   </security-role-ref>
+   
+   </servlet>
+   
+   <servlet>
+   <servlet-name>MyJspF</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/AddStu.jsp</jsp-file> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>Servlet</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.TestServlet</servlet-class> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>LServlet</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.LoginServlet</servlet-class> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>VServlet</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.ViewStudents</servlet-class> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>BServlet</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.AddBook</servlet-class> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>VBServlet</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.ViewBooks</servlet-class> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>SServlet</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.SearchBooks</servlet-class> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>BorrowServlet</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.BorrowBooks</servlet-class> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>ViewBorrowJsp</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/ViewBorrowedBooks.jsp</jsp-file> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>BRServlet</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.BorrowBooksOne</servlet-class> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>VBorrowServlet</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.BorrowBooksTwo</servlet-class> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>DeleteBooks</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.DeleteBooks</servlet-class> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>DeleteBooksTwo</servlet-name>
+   <servlet-class>ca.sheridancollege.Servlets.DeleteBookstwo</servlet-class> 
+   </servlet>
+  
+   <servlet>
+   <servlet-name>BookJsp</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/Addbook.jsp</jsp-file> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>VJsp</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/ViewStu.jsp</jsp-file> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>VBJsp</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/ViewBook.jsp</jsp-file> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>SearchJsp</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/SearchBooks.jsp</jsp-file> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>StuJsp</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/StudentLib.jsp</jsp-file> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>BRJsp</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/BorrowBooks.jsp</jsp-file> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>ViewBJsp</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/ViewBorrowedBooks.jsp</jsp-file> 
+   </servlet>
+   
+   <servlet>
+   <servlet-name>DeleteBooksJsp</servlet-name>
+   <jsp-file>/WEB-INF/JSPS/DeleteBook.jsp</jsp-file> 
+   </servlet>
+   
+   
+   <servlet-mapping>
+   <servlet-name>MyJSPOne</servlet-name>
+   <url-pattern>/Member/JspLib.jsp</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>Servlet</servlet-name>
+   <url-pattern>/Member/Servlet</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>MyJspF</servlet-name>
+   <url-pattern>/Member/AddStu.jsp</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>LServlet</servlet-name>
+   <url-pattern>/Member/Login</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>VServlet</servlet-name>
+   <url-pattern>/Member/View</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>BookJsp</servlet-name>
+   <url-pattern>/Member/Addbook.jsp</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>VJsp</servlet-name>
+   <url-pattern>/Member/ViewStu.jsp</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>BServlet</servlet-name>
+   <url-pattern>/Member/Book</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>VBServlet</servlet-name>
+   <url-pattern>/Member/ViewB</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>VBJsp</servlet-name>
+   <url-pattern>/Member/ViewBook.jsp</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>SearchJsp</servlet-name>
+   <url-pattern>/Member/SearchBooks.jsp</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>SServlet</servlet-name>
+   <url-pattern>/Member/Search</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>StuJsp</servlet-name>
+   <url-pattern>/Member/StudentLib.jsp</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>BRServlet</servlet-name>
+   <url-pattern>/Member/BorrowOne</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>BRJsp</servlet-name>
+   <url-pattern>/Member/BorrowBooks.jsp</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>BorrowServlet</servlet-name>
+   <url-pattern>/Member/Borrow</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>VBorrowServlet</servlet-name>
+   <url-pattern>/Member/BorrowTwo</url-pattern>
+   </servlet-mapping>   
+   
+   <servlet-mapping>
+   <servlet-name>ViewBJsp</servlet-name>
+   <url-pattern>/Member/ViewBorrowedBooks.jsp</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>DeleteBooks</servlet-name>
+   <url-pattern>/Member/Delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>DeleteBooksTwo</servlet-name>
+   <url-pattern>/Member/DeleteTwo</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   <servlet-name>DeleteBooksJsp</servlet-name>
+   <url-pattern>/Member/DeleteBook.jsp</url-pattern>
+   </servlet-mapping>
+  
+    <security-role>
+    <role-name>Admin</role-name>
+    </security-role>
+    
+    <security-role>
+    <role-name>Member</role-name>
+    </security-role>
+    
+    <security-role>
+    <role-name>Guest</role-name>
+    </security-role>
+    
+     <login-config>
+     <auth-method>FORM</auth-method>
+     <form-login-config>
+     <form-login-page>/login.html</form-login-page>
+     <form-error-page>/loginError.html</form-error-page>
+     </form-login-config>
+     </login-config>
+    
+     <security-constraint>
+     <web-resource-collection>
+     <web-resource-name>Secure Members</web-resource-name>
+     <url-pattern>/Member/*</url-pattern>
+     <url-pattern>/Member/AlsoMember/*</url-pattern>
+     <http-method>GET</http-method>
+     <http-method>POST</http-method>  
+     </web-resource-collection> 
+
+     <auth-constraint>        
+     <role-name>Member</role-name>
+     </auth-constraint>
+     </security-constraint>
+     
+    
+</web-app>
