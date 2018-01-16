@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <servlet>
+        <servlet-name>Jeopardyone</servlet-name>
+        <servlet-class>ca.sheridancollege.servlets.LoginServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+         <servlet-name>Jeopardyone</servlet-name>
+        <url-pattern>/loginservlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>JeopardyTwo</servlet-name>
+        <servlet-class>ca.sheridancollege.servlets.PickQuestion</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+         <servlet-name>JeopardyTwo</servlet-name>
+        <url-pattern>/selectedquestion</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>JeopardyThree</servlet-name>
+        <servlet-class>ca.sheridancollege.servlets.AnswerSelectServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+         <servlet-name>JeopardyThree</servlet-name>
+        <url-pattern>/RightAnswer</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>JeopardyFour</servlet-name>
+        <servlet-class>ca.sheridancollege.servlets.DailyDoubles</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+         <servlet-name>JeopardyFour</servlet-name>
+        <url-pattern>/dailydoubles</url-pattern>
+    </servlet-mapping>
+    
+</web-app>

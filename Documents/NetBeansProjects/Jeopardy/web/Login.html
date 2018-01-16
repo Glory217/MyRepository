@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({
+            height: 'toggle'
+        });
+    });
+});
+function Myfunction()
+  {
+      var audio = document.getElementById("audio");
+      audio.play();
+  }
+</script> 
+<style>
+button{
+position:relative;
+left:570px;
+bottom:-30px;
+font-family:serif;
+font-size:30px;
+color:#71D4FE;
+background:linear-gradient(to right,#0022FC,#756CF7,#DA54F8,#F8965F,#F7D58D);
+}
+div{
+position:relative;
+left:563px;
+bottom:-30px;
+width:500px;
+height:200px;
+}
+label{
+font-size:30px;
+position:relative;
+left:-30px;
+font-family:serif;
+color:#71D4FE;
+}
+input[type=text] {
+position:relative;
+left:40px;	
+width:70px;
+height:30px;
+}
+input[type=text]:focus {
+    border: 5px solid #71D4FE ;
+	
+}
+input[type=SUBMIT] {
+position:relative;
+left:28px;	
+bottom:10px;
+font-size:25px;
+font-weight:bold;
+font-family:serif;
+color:#71D4FE;
+background:linear-gradient(to right,#0022FC,#756CF7,#DA54F8,#F8965F,#F7D58D);
+}
+body{
+background-image:url("Image2.jpg");
+}
+</style>
+</head>
+<body>
+
+<button><i><b>Lets Begin</b></i></button>
+
+<div>
+<form action="loginservlet" onclick="Myfunction()">
+<label for="name"><b><i>Enter Your Name</i><b></label><br>
+<input type="text" name="name"/>
+<br><br>
+<input type="SUBMIT" />
+</div>
+
+ <audio id="audio" src="ClickSound.mp3" ></audio>
+ 
+</body>
+</html>
